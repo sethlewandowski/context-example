@@ -11,5 +11,8 @@ export default function Page2() {
         navigate('/page3');
     };
 
-    return <button onClick={onClick}>Next.. currentContext: {context}</button>;
+    return (<>
+	<button onClick={onClick}>Next</button>;
+	<div>currentContext: {context}</div>
+	</>)
 }

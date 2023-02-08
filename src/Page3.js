@@ -3,7 +3,5 @@ import { SharedContext } from './context';
 
 export default function Page3() {
     const { context } = useContext(SharedContext);
-    // const [num, setNum] = context;
-
     return <div>context = {context}</div>;
 }
