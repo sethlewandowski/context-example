@@ -8,14 +8,9 @@ import { SharedContext } from './context';
 function App() {
   const [context, setContext] = useState(null);
 
-  function changeContext(context) {
-	console.log('changeContext fired!')
-	setContext(context);
-  }
-
   return (
     <BrowserRouter>
-      <SharedContext.Provider value={{ context, changeContext }}>
+      <SharedContext.Provider value={{ context, setContext }}>
         <Routes>
           <Route path="/" element={<Page1 />} />
           <Route path="/page2" element={<Page2 />} />
