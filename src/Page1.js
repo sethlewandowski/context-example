@@ -4,11 +4,11 @@ import { SharedContext } from './context';
 
 export default function Page1() {
     const navigate = useNavigate();
-    const { setContext } = useContext(SharedContext);
+    const { changeContext } = useContext(SharedContext);
     const numState = useState(0);
 
     useEffect(() => {
-        setContext(numState);
+        changeContext(numState);
     }, []);
 
     const onClick = () => {

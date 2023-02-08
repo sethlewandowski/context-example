@@ -4,11 +4,11 @@ import { SharedContext } from './context';
 
 export default function Page2() {
     const navigate = useNavigate();
-    const { context } = useContext(SharedContext);
-    const [num, setNum] = context;
+    const { changeContext } = useContext(SharedContext);
+	// const [num, setNum] = context;
 
     const onClick = () => {
-        setNum(1);
+        changeContext(1);
         navigate('/page3');
     };
 
